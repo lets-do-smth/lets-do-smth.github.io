@@ -70,9 +70,23 @@ body, html {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin: 10px 0;
     line-height: 0.9;
+}
+
+/* Smaller font size for screens less than 768px (tablets and phones) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Adjust as needed */
+    }
+}
+
+/* Even smaller font size for screens less than 480px (phones) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem; /* Adjust as needed */
+    }
 }
 
 .additional-info {
