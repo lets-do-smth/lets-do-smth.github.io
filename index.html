@@ -106,6 +106,12 @@
 
             sections.forEach((section) => observer.observe(section));
         });
+        const cacheBust = new Date().getTime();
+        document.querySelectorAll('link[rel="stylesheet"], script').forEach((el) => {
+            const url = new URL(el.getAttribute(el.tagName === 'LINK' ? 'href' : 'src'), window.location.href);
+            url.searchParams.set('v', cacheBust);
+            el.setAttribute(el.tagName === 'LINK' ? 'href' : 'src', url.toString());
+        });
     </script>
 </body>
 </html>
