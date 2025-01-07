@@ -252,15 +252,29 @@ h1 {
 }
 
 .contact-label {
+    text-decoration: none;
     font-weight: 700;
     font-size: 1rem;
 }
 
-.contact-value {
+/*.contact-value {*/
+/*    font-size: 1rem;*/
+/*    font-weight: 400;*/
+/*    color: black;*/
+/*}*/
+
+.contact-value a {
+    text-decoration: none;
+    font-weight: 700;
     font-size: 1rem;
-    font-weight: 400;
     color: black;
+    transition: color 0.3s ease;
 }
+
+.contact-value a:hover {
+    color: #1356E3;
+}
+
 
 .section-content {
     animation: fadeInUp 1s ease-out;
