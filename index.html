@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Anastasia's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#works" class="nav-link">WORKS</a>
+            <a href="#contacts" class="nav-link">CONTACTS</a>
+        </div>
+    </header>
+    <main class="main-info">
+        <div class="section-content">
+            <img src="IMG_9992.jpg" alt="Profile Image" class="profile-image">
+            <h1>I’m Anastasia — <br> a graphic designer <br> specialised in illustration</h1>
+            <div class="additional-info">
+                <p>BASED IN MOSCOW &bull; WORK WORLDWIDE</p>
+            </div>
+        </div>
+    </main>
+    
+    <section id="works" class="works-section">
+        <div class="section-content">
+            <h2 class="section-title">works</h2>
+            <div class="works-grid">
+                <div class="work-item project-1">
+                    <div class="work-content">
+                        <h3 class="work-title">DIVISARE CITY GUIDE</h3>
+                        <p class="work-description">BOOK DESIGN</p>
+                    </div>
+                </div>
+                <div class="work-item project-2">
+                    <div class="work-content">
+                        <h3 class="work-title">MEGAFON DIGITAL POSTCARDS</h3>
+                        <p class="work-description">ILLUSTRATION</p>
+                    </div>
+                </div>
+                <div class="work-item project-3">
+                    <div class="work-content">
+                        <h3 class="work-title">ARTCAPS</h3>
+                        <p class="work-description">BRANDING & WEB</p>
+                    </div>
+                </div>
+                <div class="work-item project-4">
+                    <div class="work-content">
+                        <h3 class="work-title">MAXUS CONDOMS</h3>
+                        <p class="work-description">PACKAGE DESIGN</p>
+                    </div>
+                </div>
+                <div class="work-item project-5">
+                    <div class="work-content">
+                        <h3 class="work-title">SETS OF STICKERS</h3>
+                        <p class="work-description">ILLUSTRATION</p>
+                    </div>
+                </div>
+                <div class="work-item project-6">
+                    <div class="work-content">
+                        <h3 class="work-title">LOGOS & MARKS</h3>
+                        <p class="work-description"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contacts" class="contacts-section">
+        <div class="section-content">
+            <h2 class="contacts-heading">let's do smth cool together</h2>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <span class="contact-label">EMAIL</span>
+                    <span class="contact-value">KUDRINAAA97@GMAIL.COM</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">TG</span>
+                    <span class="contact-value">@ANASTASIA9055</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <p>&copy; 2025 Anastasia's Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Page loaded and scroll reset to top.');
+            window.history.scrollRestoration = 'manual'; // Prevent browser from restoring scroll position
+            window.scrollTo(0, 0);
+
+            const sections = document.querySelectorAll('.section-content');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+                        entry.target.classList.add('scrolled');
+                    }
+                });
+            }, { threshold: [0.5] });
+
+            sections.forEach((section) => observer.observe(section));
+        });
+    </script>
+</body>
+</html>

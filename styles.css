@@ -1,0 +1,273 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Public Sans', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Smooth scrolling between sections */
+    height: 100%; /* Ensure the body spans full height */
+    overflow-x: hidden;
+}
+
+/* Add full-height to every section */
+.main-info,
+.contacts-section {
+    min-height: 100vh; /* Full screen height for each section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    background-color: black;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #1356E3;
+}
+
+/* Hero Section */
+.main-info {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px; /* Square with rounded edges */
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin: 10px 0;
+    line-height: 0.9;
+}
+
+.additional-info {
+    margin-top: 40px;
+    font-size: 1rem;
+    color: #1356E3;
+    font-weight: 700;
+}
+
+/* Works Section */
+.works-section {
+    width: 100%;
+    padding: 50px 0;
+    background-color: black; /* Black background for the section */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: white;
+    text-transform: lowercase;
+}
+
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 0; /* No spacing between items */
+}
+
+.work-item {
+    position: relative;
+    width: 100%;
+    padding-top: 75%; /* 16:9 Aspect Ratio */
+    overflow: hidden;
+}
+
+.project-1 {
+    background-color: #FFCC00; /* Fallback solid color */
+    background-image: url('assets/divisare.gif'); /* Use a GIF or image */
+    background-size: cover;
+    background-position: center;
+}
+
+.project-2 {
+    background-color: #1356E3; /* Fallback solid color */
+    background-image: url('assets/postcards.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.project-3 {
+    background-color: #2B9B4A; /* Fallback solid color */
+    background-image: url('assets/artcaps.gif');
+    background-size: cover;
+    background-position: center;
+}
+
+.project-4 {
+    background-color: #FFCC00; /* Fallback solid color */
+    background-image: url('assets/maxus-1.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.project-5 {
+    background-color: #2B9B4A; /* Fallback solid color */
+    background-image: url('assets/stickers.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.project-6 {
+    background-color: #fff; /* Fallback solid color */
+    background-image: url('assets/logos.gif');
+    background-size: cover;
+    background-position: center;
+}
+
+.work-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.2); /* Slight overlay for better readability */
+    transition: background 0.3s ease;
+}
+
+.work-title {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    transition: transform 0.3s ease;
+}
+
+.work-description {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: white;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.work-item:hover .work-content {
+    background: rgba(0, 0, 0, 0);
+}
+
+.work-item:hover .work-title {
+    transform: translateY(-40px); /* Slides the title upwards */
+}
+
+.work-item:hover .work-description {
+    opacity: 1;
+    transform: translateY(-20px); /* Fades and slides in the description */
+}
+
+/* Contacts Section */
+.contacts-section {
+    width: 100%;
+    padding: 50px 20px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.contacts-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-transform: lowercase;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-label {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.contact-value {
+    font-size: 1rem;
+    font-weight: 400;
+    color: black;
+}
+
+.section-content {
+    animation: fadeInUp 1s ease-out;
+}
+
+.footer {
+    background-color: black; /* Match the overall theme */
+    color: white; /* Text color for contrast */
+    text-align: center; /* Center the text */
+    padding: 20px 0; /* Add vertical spacing */
+    font-size: 0.9rem; /* Slightly smaller font size */
+    position: relative; /* Ensures no overlap with content */
+    border-top: 2px solid #ffffff22; /* Subtle border at the top for separation */
+}
+
+.footer p {
+    margin: 0; /* Remove default paragraph margin */
+    letter-spacing: 1px; /* Add spacing for a polished look */
+    font-weight: 300; /* Use a light font weight for elegance */
+}
+
+/* Scrolling Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
