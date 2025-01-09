@@ -74,7 +74,8 @@ h1 {
 .description-title {
     grid-column: span 2; /* Spans two columns */
     text-align: left; /* Aligns text to the left */
-    color: #EB4E29; /* Sets text color to red */
+/*    color: #EB4E29; /* Sets text color to red */
+    color: #000000;
 }
 
 .description-text {
@@ -84,7 +85,8 @@ h1 {
 .description-text p {
     font-size: 2rem; /* Large font size for paragraphs */
     margin-top: 0; /* Removes top margin */
-    color: #EB4E29; /* Red text color */
+    color: #000000;
+/*    color: #EB4E29; /* Red text color */
     margin-right: 10px; /* Adds right margin */
 }
 
