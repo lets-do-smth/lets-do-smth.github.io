@@ -1,0 +1,261 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Public Sans', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Full-Height Sections */
+.main-info,
+.contacts-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    background-color: black;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #1356E3;
+}
+
+/* Hero Section */
+.main-info {
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin: 10px 0;
+    line-height: 0.9;
+}
+
+.additional-info {
+    margin-top: 40px;
+    font-size: 1rem;
+    color: #1356E3;
+    font-weight: 700;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Works Section */
+.works-section {
+    width: 100%;
+    padding: 50px 0 0 0;
+    background-color: black;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: white;
+    text-transform: lowercase;
+}
+
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+}
+
+.work-item {
+    position: relative;
+    width: 100%;
+    padding-top: 75%;
+    overflow: hidden;
+    transition: background 0.3s ease;
+}
+
+.work-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.work-title {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    transition: transform 0.3s ease;
+}
+
+.work-description {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: white;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.work-item:hover .work-content {
+    background: rgba(0, 0, 0, 0);
+}
+
+.work-item:hover .work-title {
+    transform: translateY(-40px);
+}
+
+.work-item:hover .work-description {
+    opacity: 1;
+    transform: translateY(-20px);
+}
+
+@media (max-width: 768px) {
+    .works-grid {
+        grid-template-columns: 1fr;
+    }
+    .work-title {
+        transform: translateY(-15px); /* Reset transform to original position */
+    }
+    .work-description {
+        opacity: 1; /* Make description visible */
+        transform: translateY(-15px); /* Reset transform to original position */
+    }
+
+    .work-content {
+        background: rgba(0, 0, 0, 0.15);
+    }
+    
+    .work-item:hover .work-content {
+        background: rgba(0, 0, 0, 0);
+    }
+
+    .work-item:hover .work-title {
+        transform: translateY(-15px); /* Prevent from moving */
+    }
+    .work-item:hover .work-description {
+        transform: translateY(-15px);
+    }
+}
+
+/* Project Background Styles */
+.project-1 { background: #FFCC00 url('assets/divisare.gif') center / cover; }
+.project-2 { background: #1356E3 url('assets/postcards.png') center / cover; }
+.project-3 { background: #2B9B4A url('assets/artcaps.gif') center / cover; }
+.project-4 { background: #FFCC00 url('assets/maxus-1.png') center / cover; }
+.project-5 { background: #2B9B4A url('assets/stickers.png') center / cover; }
+.project-6 { background: #fff url('assets/logos.gif') center / cover; }
+
+/* Contacts Section */
+.contacts-section {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+.contacts-heading {
+    margin-bottom: 40px;
+    text-transform: lowercase;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-value a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.contact-value a:hover {
+    color: #1356E3;
+}
+
+/* Footer */
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    border-top: 2px solid #ffffff22;
+}
+
+.footer p {
+    margin: 0;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.section-content {
+    animation: fadeInUp 1s ease-out;
+}

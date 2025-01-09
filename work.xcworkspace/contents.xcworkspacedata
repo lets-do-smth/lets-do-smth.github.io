@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:styles-projects.css">
+   </FileRef>
+   <FileRef
       location = "container:index.html">
+   </FileRef>
+   <FileRef
+      location = "group:project-1.html">
+   </FileRef>
+   <FileRef
+      location = "group:styles.css">
    </FileRef>
 </Workspace>
