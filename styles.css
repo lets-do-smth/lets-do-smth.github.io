@@ -1,191 +1,190 @@
+/* Global Styles */
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Public Sans', sans-serif;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    height: 100%;
-    overflow-x: hidden;
+    font-family: 'Public Sans', sans-serif; /* Sets a modern sans-serif font */
+    box-sizing: border-box; /* Ensures padding and borders are included in element dimensions */
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+    height: 100%; /* Sets height for body and html */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
-
+/* Common Section Styles */
 .main-info,
 .contacts-section {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    min-height: 100vh; /* Ensures sections take up full viewport height */
+    display: flex; /* Enables flexbox for layout */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    flex-direction: column; /* Stacks items vertically */
 }
 
-
+/* Navbar Styles */
 .navbar {
-    width: 100%;
-    background-color: black;
-    padding: 20px 0;
-    display: flex;
-    justify-content: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    width: 100%; /* Full-width navbar */
+    background-color: black; /* Black background */
+    padding: 20px 0; /* Vertical padding */
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Centers navbar items */
+    position: sticky; /* Sticks navbar to top on scroll */
+    top: 0; /* Sets sticky positioning at top */
+    z-index: 1000; /* Ensures navbar stays on top */
 }
 
 .nav-container {
     display: flex;
-    gap: 40px;
+    gap: 40px; /* Space between navigation links */
 }
 
 .nav-link {
-    text-decoration: none;
-    font-weight: 700;
-    color: white;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+    text-decoration: none; /* Removes underline from links */
+    font-weight: 700; /* Bold text */
+    color: white; /* White text color */
+    font-size: 1rem; /* Sets font size */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .nav-link:hover {
-    color: #1356E3;
+    color: #1356E3; /* Changes color on hover */
 }
 
-
+/* Main Info Section */
 .main-info {
-    width: 100%;
-    text-align: center;
-    background-color: black;
-    color: white;
-    padding: 20px 0;
+    width: 100%; /* Full-width */
+    text-align: center; /* Centers text */
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    padding: 20px 0; /* Vertical padding */
 }
 
 .profile-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 15px;
-    margin-bottom: 20px;
+    width: 150px; /* Fixed width */
+    height: 150px; /* Fixed height */
+    border-radius: 15px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below image */
 }
 
 h1 {
-    font-size: 3.5rem;
-    margin: 10px 0;
-    line-height: 0.9;
+    font-size: 3.5rem; /* Large font size */
+    margin: 10px 0; /* Vertical spacing */
+    line-height: 0.9; /* Compact line height */
 }
 
 .additional-info {
-    margin-top: 40px;
-    font-size: 1rem;
-    color: #1356E3;
-    font-weight: 700;
+    margin-top: 40px; /* Space above additional info */
+    font-size: 1rem; /* Standard font size */
+    color: #1356E3; /* Blue text color */
+    font-weight: 700; /* Bold text */
 }
 
-
+/* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* Smaller font size for mobile */
     }
 }
 
-
+/* Works Section */
 .works-section {
-    width: 100%;
-    padding: 50px 0 0 0;
-    background-color: black;
+    width: 100%; /* Full-width section */
+    padding: 50px 0 0 0; /* Vertical padding */
+    background-color: black; /* Black background */
 }
 
 .section-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: white;
-    text-transform: lowercase;
+    text-align: center; /* Centers text */
+    font-size: 2rem; /* Large font size */
+    margin-bottom: 30px; /* Space below title */
+    color: white; /* White text */
+    text-transform: lowercase; /* Lowercase text */
 }
 
 .works-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0;
+    display: grid; /* Grid layout for items */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 0; /* No gap between items */
 }
 
+/* Individual Work Items */
 .work-item {
-    position: relative;
-    width: 100%;
-    padding-top: 75%;
-    overflow: hidden;
-    transition: background 0.3s ease;
+    position: relative; /* Enables absolute positioning of children */
+    width: 100%; /* Full-width item */
+    padding-top: 75%; /* Aspect ratio for items */
+    overflow: hidden; /* Hides overflow */
+    transition: background 0.3s ease; /* Smooth background transition */
 }
 
 .work-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding: 15px;
-    background: rgba(0, 0, 0, 0.2);
+    position: absolute; /* Positioned inside parent */
+    top: 0; /* Aligns to top */
+    left: 0; /* Aligns to left */
+    width: 100%; /* Full-width content */
+    height: 100%; /* Full-height content */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stacks items */
+    justify-content: flex-end; /* Aligns items to bottom */
+    align-items: flex-start; /* Aligns items to start */
+    padding: 15px; /* Padding inside content */
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
 }
 
 .work-title {
-    margin: 0;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: white;
-    text-transform: uppercase;
-    transition: transform 0.3s ease;
+    margin: 0; /* Removes default margin */
+    font-size: 1.2rem; /* Font size */
+    font-weight: 700; /* Bold text */
+    color: white; /* White text */
+    text-transform: uppercase; /* Uppercase text */
+    transition: transform 0.3s ease; /* Smooth transform transition */
 }
 
 .work-description {
-    margin-top: 5px;
-    font-size: 1rem;
-    color: white;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    margin-top: 5px; /* Space above description */
+    font-size: 1rem; /* Standard font size */
+    color: white; /* White text */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(10px); /* Starts offscreen */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
 }
 
+/* Hover Effects */
 .work-item:hover .work-content {
-    background: rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0); /* Removes background */
 }
 
 .work-item:hover .work-title {
-    transform: translateY(-40px);
+    transform: translateY(-40px); /* Moves title upward */
 }
 
 .work-item:hover .work-description {
-    opacity: 1;
-    transform: translateY(-20px);
+    opacity: 1; /* Makes description visible */
+    transform: translateY(-20px); /* Moves description upward */
 }
 
+/* Responsive Grid for Smaller Screens */
 @media (max-width: 768px) {
     .works-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Single column grid */
     }
+
     .work-title {
-        transform: translateY(-15px); 
+        transform: translateY(-15px); /* Adjust title movement */
     }
+
     .work-description {
-        opacity: 1; 
-        transform: translateY(-15px); 
+        opacity: 1; /* Ensures visibility */
+        transform: translateY(-15px); /* Adjust movement */
     }
 
     .work-content {
-        background: rgba(0, 0, 0, 0.15);
-    }
-    
-    .work-item:hover .work-content {
-        background: rgba(0, 0, 0, 0);
+        background: rgba(0, 0, 0, 0.15); /* Lighter background */
     }
 
-    .work-item:hover .work-title {
-        transform: translateY(-15px); 
-    }
-    .work-item:hover .work-description {
-        transform: translateY(-15px);
+    .work-item:hover .work-content {
+        background: rgba(0, 0, 0, 0); /* Clears background */
     }
 }
 
-
+/* Work Item Backgrounds */
 .project-1 { background: #FFCC00 url('assets/divisare.gif') center / cover; }
 .project-2 { background: #1356E3 url('assets/postcards.png') center / cover; }
 .project-3 { background: #2B9B4A url('assets/artcaps.gif') center / cover; }
@@ -193,68 +192,74 @@ h1 {
 .project-5 { background: #2B9B4A url('assets/stickers.png') center / cover; }
 .project-6 { background: #fff url('assets/logos.gif') center / cover; }
 
-
+/* Contact Section */
 .contacts-section {
-    width: 100%;
-    padding: 50px 0;
-    text-align: center;
-    background-color: white;
-    color: black;
+    width: 100%; /* Full-width */
+    padding: 50px 0; /* Vertical padding */
+    text-align: center; /* Centers text */
+    background-color: white; /* White background */
+    color: black; /* Black text */
 }
 
 .contacts-heading {
-    margin-bottom: 40px;
-    text-transform: lowercase;
+    margin-bottom: 40px; /* Space below heading */
+    text-transform: lowercase; /* Lowercase text */
 }
 
 .contact-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Centers items */
+    gap: 15px; /* Space between items */
 }
 
 .contact-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    gap: 20px; /* Space between elements */
 }
 
 .contact-value a {
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1rem;
-    color: black;
-    transition: color 0.3s ease;
+    text-decoration: none; /* Removes underline from links */
+    font-weight: 700; /* Bold text */
+    font-size: 1rem; /* Font size */
+    color: black; /* Black text */
+    transition: color 0.3s ease; /* Smooth transition on hover */
 }
 
 .contact-value a:hover {
-    color: #1356E3;
+    color: #1356E3; /* Blue color on hover */
 }
 
-
+/* Footer Section */
 .footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.9rem;
-    border-top: 2px solid #ffffff22;
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    text-align: center; /* Centers text */
+    padding: 20px 0; /* Vertical padding */
+    font-size: 0.9rem; /* Font size */
+    border-top: 2px solid #ffffff22; /* Subtle border at the top */
 }
 
 .footer p {
-    margin: 0;
-    letter-spacing: 1px;
-    font-weight: 300;
+    margin: 0; /* Removes default margin */
+    letter-spacing: 1px; /* Spaced out text */
+    font-weight: 300; /* Light font weight */
 }
 
-
+/* Animation */
 @keyframes fadeInUp {
-    0% { opacity: 0; transform: translateY(50px); }
-    100% { opacity: 1; transform: translateY(0); }
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Starts below the viewport */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Ends in place */
+    }
 }
 
 .section-content {
-    animation: fadeInUp 1s ease-out;
+    animation: fadeInUp 1s ease-out; /* Applies fade-in animation */
 }

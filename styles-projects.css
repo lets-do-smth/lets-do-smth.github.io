@@ -1,177 +1,174 @@
+/* Global Styles */
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Public Sans', sans-serif;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    height: 100%;
-    overflow-x: hidden;
+    font-family: 'Public Sans', sans-serif; /* Modern sans-serif font */
+    box-sizing: border-box; /* Includes padding and borders in element dimensions */
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+    height: 100%; /* Sets the height of body and html elements */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
+/* Header Styles */
 h1 {
-    font-size: 3.5rem;
-    letter-spacing: -0.05em;
-    margin-top:0;
-    margin-left:10px;
+    font-size: 3.5rem; /* Large font size for main headings */
+    letter-spacing: -0.05em; /* Slightly tightens letter spacing */
+    margin-top: 0; /* Removes top margin */
+    margin-left: 10px; /* Adds left margin for alignment */
 }
 
-
+/* Responsive Design for Header */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* Smaller font size for mobile screens */
     }
 }
 
-
+/* Navbar Styles */
 .navbar {
-    width: 100%;
-    background-color: black;
-    padding: 20px 0;
-    display: flex;
-    justify-content: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    width: 100%; /* Full-width navbar */
+    background-color: black; /* Black background */
+    padding: 20px 0; /* Vertical padding */
+    display: flex; /* Flexbox for layout */
+    justify-content: center; /* Centers navigation items */
+    position: sticky; /* Sticks navbar to the top on scroll */
+    top: 0; /* Top position for sticky navbar */
+    z-index: 1000; /* Ensures navbar stays on top */
 }
 
 .nav-container {
-    display: flex;
-    gap: 40px;
+    display: flex; /* Flexbox layout */
+    gap: 40px; /* Space between navigation links */
 }
 
 .nav-link {
-    text-decoration: none;
-    font-weight: 700;
-    color: white;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+    text-decoration: none; /* Removes underline */
+    font-weight: 700; /* Bold text */
+    color: white; /* White text */
+    font-size: 1rem; /* Standard font size */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .nav-link:hover {
-    color: #1356E3;
+    color: #1356E3; /* Changes text color on hover */
 }
 
-
+/* Project Cover Styles */
 .project-cover .cover-image {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    background:black;
-
+    width: 100%; /* Full-width image */
+    height: 100vh; /* Full viewport height */
+    object-fit: cover; /* Maintains aspect ratio while covering the area */
+    background: black; /* Black background as fallback */
 }
 
-
+/* Project Description Section */
 .project-description .description-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 60px;
-    padding: 0px;
-    max-width: 800px;
-    margin: 50px auto 200px auto;
+    display: grid; /* Grid layout for description content */
+    grid-template-columns: repeat(6, 1fr); /* Six equal columns */
+    gap: 60px; /* Space between grid items */
+    padding: 0; /* Removes default padding */
+    max-width: 800px; /* Maximum width for grid */
+    margin: 50px auto 200px auto; /* Centers grid with top and bottom margins */
 }
 
 .description-title {
-    grid-column: span 2;
-    text-align: left;
-    color: #EB4E29;
+    grid-column: span 2; /* Spans two columns */
+    text-align: left; /* Aligns text to the left */
+    color: #EB4E29; /* Sets text color to red */
 }
+
 .description-text {
-    grid-column: span 4;
+    grid-column: span 4; /* Spans four columns */
 }
 
 .description-text p {
-    font-size: 2rem;
-    margin-top: 0;
-    color: #EB4E29;
-    margin-right:10px;
+    font-size: 2rem; /* Large font size for paragraphs */
+    margin-top: 0; /* Removes top margin */
+    color: #EB4E29; /* Red text color */
+    margin-right: 10px; /* Adds right margin */
 }
 
-
+/* Responsive Design for Project Description */
 @media (max-width: 768px) {
     .description-text p {
-        font-size: 1.5rem;
-        margin: 0 10px;
+        font-size: 1.5rem; /* Smaller font size for mobile */
+        margin: 0 10px; /* Adds horizontal margins */
     }
+
     .project-description .description-grid {
-        grid-template-columns: 1fr;
-        gap: 5px;
+        grid-template-columns: 1fr; /* Single column grid on mobile */
+        gap: 5px; /* Reduced gap */
+    }
 }
 
-
-
+/* Contacts Section */
 .contacts-section {
-    width: 100%;
-    padding: 50px 0 100px 0;
-    text-align: center;
-    background-color: white;
-    color: white;
-    background: black;
+    width: 100%; /* Full-width section */
+    padding: 50px 0 100px 0; /* Top and bottom padding */
+    text-align: center; /* Centers text */
+    background: black; /* Black background */
+    color: white; /* White text */
 }
 
 .contacts-heading {
-    margin-bottom: 40px;
-    text-transform: lowercase;
-    letter-spacing: -0.05em;
+    margin-bottom: 40px; /* Space below heading */
+    text-transform: lowercase; /* Lowercase text */
+    letter-spacing: -0.05em; /* Slightly tight letter spacing */
 }
 
 .contact-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Centers items horizontally */
+    gap: 15px; /* Space between contact items */
 }
 
 .contact-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    display: flex; /* Flexbox for alignment */
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    gap: 20px; /* Space between elements */
 }
 
 .contact-value a {
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1rem;
-    color: white;
-    transition: color 0.3s ease;
+    text-decoration: none; /* Removes underline */
+    font-weight: 700; /* Bold text */
+    font-size: 1rem; /* Standard font size */
+    color: white; /* White text */
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .contact-value a:hover {
-    color: #1356E3;
+    color: #1356E3; /* Changes color to blue on hover */
 }
 
-
+/* Footer Styles */
 .footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.9rem;
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    text-align: center; /* Centers text */
+    padding: 20px 0; /* Vertical padding */
+    font-size: 0.9rem; /* Small font size */
 }
 
 .footer p {
-    margin: 0;
-    letter-spacing: 1px;
-    font-weight: 300;
+    margin: 0; /* Removes default margin */
+    letter-spacing: 1px; /* Spaced-out letters */
+    font-weight: 300; /* Light font weight */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+/* Animation */
 @keyframes fadeInUp {
-    0% { opacity: 0; transform: translateY(50px); }
-    100% { opacity: 1; transform: translateY(0); }
+    0% {
+        opacity: 0; /* Fully transparent */
+        transform: translateY(50px); /* Starts below the viewport */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Ends in place */
+    }
 }
 
 .section-content {
-    animation: fadeInUp 1s ease-out;
+    animation: fadeInUp 1s ease-out; /* Applies fade-in animation */
 }
