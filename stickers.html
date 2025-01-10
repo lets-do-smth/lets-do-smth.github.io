@@ -23,9 +23,24 @@
     </a>
    </div>
   </header>
-  <section class="project-cover" id="project-cover">
-   <img alt="Project Cover" class="cover-image" src="assets/additional-3.jpg"/>
-  </section>
+<!--  <section class="project-cover" id="project-cover">-->
+<!--   <img alt="Project Cover" class="cover-image" src="assets/additional-3.jpg"/>-->
+<!--  </section>-->
+
+<section class="project-cover" id="project-cover">
+  <div class="slider">
+    <div class="slides">
+    <img src="assets/stickers/sticker-01.png" alt="Project Cover 1" class="slide">
+    <img src="assets/stickers/sticker-02.png" alt="Project Cover 1" class="slide">
+    <img src="assets/stickers/sticker-03.png" alt="Project Cover 1" class="slide">
+    <img src="assets/stickers/sticker-04.png" alt="Project Cover 1" class="slide">
+    <img src="assets/stickers/sticker-05.png" alt="Project Cover 1" class="slide">
+    </div>
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+  </div>
+</section>
+
   <section class="project-description" id="project-description">
    <div class="description-grid">
     <div class="description-title">
@@ -35,7 +50,7 @@
     </div>
     <div class="description-text">
      <p>
-     ---
+     Sticker packs for different brands and purposes.
      </p>
     </div>
    </div>
@@ -71,5 +86,17 @@
     © 2025 dosmth. All rights reserved.
    </p>
   </footer>
+  
+  <script>
+    let currentIndex = 0;
+
+    function changeSlide(direction) {
+      const slides = document.querySelector('.slides');
+      const totalSlides = slides.children.length;
+      currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+  </script>
+  
  </body>
 </html>
