@@ -23,9 +23,40 @@
     </a>
    </div>
   </header>
-  <section class="project-cover" id="project-cover">
-   <img alt="Project Cover" class="cover-image" src="assets/divisare-cover-static.png"/>
-  </section>
+  
+<!--  <section class="project-cover" id="project-cover">-->
+<!--   <img alt="Project Cover" class="cover-image" src="assets/divisare-cover-static.png"/>-->
+<!--  </section>-->
+
+<section class="project-cover" id="project-cover">
+  <div class="slider">
+    <div class="slides">
+        <img src="assets/divisare/01.png" alt="Project Cover 1" class="slide">
+        <img src="assets/divisare/02.png" alt="Project Cover 1" class="slide">
+        <img src="assets/divisare/03.png" alt="Project Cover 1" class="slide">
+        <img src="assets/divisare/04.png" alt="Project Cover 1" class="slide">
+        <img src="assets/divisare/05.png" alt="Project Cover 1" class="slide">
+        <img src="assets/divisare/06.png" alt="Project Cover 1" class="slide">
+        <img src="assets/divisare/07.png" alt="Project Cover 1" class="slide">
+        <img src="assets/divisare/08.png" alt="Project Cover 1" class="slide">
+        <img src="assets/divisare/09.png" alt="Project Cover 1" class="slide">
+        <img src="assets/divisare/10.png" alt="Project Cover 1" class="slide">
+        <img src="assets/divisare/11.png" alt="Project Cover 1" class="slide">
+        <img src="assets/divisare/12.png" alt="Project Cover 1" class="slide">
+        <img src="assets/divisare/13.png" alt="Project Cover 1" class="slide">
+        <img src="assets/divisare/14.png" alt="Project Cover 1" class="slide">
+        <img src="assets/divisare/15.png" alt="Project Cover 1" class="slide">
+<!--        <img src="assets/divisare/16.png" alt="Project Cover 1" class="slide">-->
+<!--        <img src="assets/divisare/08.png" alt="Project Cover 1" class="slide">-->
+<!--        <img src="assets/divisare/08.png" alt="Project Cover 1" class="slide">-->
+<!--        <img src="assets/divisare/08.png" alt="Project Cover 1" class="slide">-->
+                                                        
+    </div>
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+  </div>
+</section>
+
   <section class="project-description" id="project-description">
    <div class="description-grid">
     <div class="description-title">
@@ -71,5 +102,17 @@
     © 2025 dosmth. All rights reserved.
    </p>
   </footer>
+  
+  <script>
+    let currentIndex = 0;
+
+    function changeSlide(direction) {
+      const slides = document.querySelector('.slides');
+      const totalSlides = slides.children.length;
+      currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+  </script>
+  
  </body>
 </html>

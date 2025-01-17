@@ -95,7 +95,7 @@ h1 {
 
 .section-title {
     text-align: center; /* Centers text */
-    font-size: 2rem; /* Large font size */
+/*    font-size: 2rem; /* Large font size */
     margin-bottom: 30px; /* Space below title */
     color: white; /* White text */
     text-transform: lowercase; /* Lowercase text */
