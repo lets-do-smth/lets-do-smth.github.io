@@ -68,6 +68,8 @@ h1 {
     font-size: 3.5rem; /* Large font size */
     margin: 10px 0; /* Vertical spacing */
     line-height: 0.9; /* Compact line height */
+    letter-spacing: -0.04em;
+    font-weight: 300;
 }
 
 .additional-info {
