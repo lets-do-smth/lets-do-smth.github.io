@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <title>
+   Project Page
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+  <link href="styles-projects.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header class="navbar">
+   <div class="nav-container">
+    <a class="nav-link" href="index.html">
+     MAIN PAGE
+    </a>
+    <a class="nav-link" href="#contacts">
+     CONTACTS
+    </a>
+    <a class="nav-link" href="https://www.behance.net/do_smth" target="_blank">
+     BEHANCE
+    </a>
+   </div>
+  </header>
+  
+<!--  <section class="project-cover" id="project-cover">-->
+<!--   <img alt="Project Cover" class="cover-image" src="assets/divisare-cover-static.png"/>-->
+<!--  </section>-->
+
+<section class="project-cover" id="project-cover">
+  <div class="slider">
+    <div class="slides">
+        <img src="assets/Illustrations/01.png" alt="Project Cover 1" class="slide">
+        <img src="assets/Illustrations/02.png" alt="Project Cover 1" class="slide">
+        <img src="assets/Illustrations/03.png" alt="Project Cover 1" class="slide">
+<!--        <img src="assets/Illustrations/04.png" alt="Project Cover 1" class="slide">-->
+<!--        <img src="assets/Illustrations/05.png" alt="Project Cover 1" class="slide">-->
+<!--        <img src="assets/Illustrations/06.png" alt="Project Cover 1" class="slide">-->
+<!--        <img src="assets/Illustrations/07.png" alt="Project Cover 1" class="slide">-->
+<!--        <img src="assets/Illustrations/08.png" alt="Project Cover 1" class="slide">-->
+<!--        <img src="assets/Illustrations/09.png" alt="Project Cover 1" class="slide">-->
+<!--        <img src="assets/divisare/10.png" alt="Project Cover 1" class="slide">-->
+<!--        <img src="assets/divisare/11.png" alt="Project Cover 1" class="slide">-->
+<!--        <img src="assets/divisare/12.png" alt="Project Cover 1" class="slide">-->
+<!--        <img src="assets/divisare/13.png" alt="Project Cover 1" class="slide">-->
+<!--        <img src="assets/divisare/14.png" alt="Project Cover 1" class="slide">-->
+<!--        <img src="assets/divisare/15.png" alt="Project Cover 1" class="slide">-->
+<!--        <img src="assets/divisare/16.png" alt="Project Cover 1" class="slide">-->
+<!--        <img src="assets/divisare/08.png" alt="Project Cover 1" class="slide">-->
+<!--        <img src="assets/divisare/08.png" alt="Project Cover 1" class="slide">-->
+<!--        <img src="assets/divisare/08.png" alt="Project Cover 1" class="slide">-->
+                                                        
+    </div>
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+  </div>
+</section>
+
+<!--  <section class="project-description" id="project-description">-->
+<!--   <div class="description-grid">-->
+<!--    <div class="description-title">-->
+<!--     <h1>-->
+<!--      Divisare City Guide-->
+<!--     </h1>-->
+<!--    </div>-->
+<!--    <div class="description-text">-->
+<!--     <p>-->
+<!--      Each book is a architectural guide to the city according to Divisare. It includes 10-15 most appreciated projects.-->
+<!--     </p>-->
+<!--    </div>-->
+<!--   </div>-->
+<!--  </section>-->
+  <section class="contacts-section" id="contacts">
+   <div class="section-content">
+    <div class="contact-details">
+     <div class="contact-item">
+      <span class="contact-label">
+       EMAIL
+      </span>
+      <span class="contact-value">
+       <a href="mailto:kudrinaaa97@gmail.com" target="_blank">
+        @KUDRINAAA97@GMAIL.COM
+       </a>
+      </span>
+     </div>
+     <div class="contact-item">
+      <span class="contact-label">
+       TG
+      </span>
+      <span class="contact-value">
+       <a href="http://t.me/anastasia9055" target="_blank">
+        @ANASTASIA9055
+       </a>
+      </span>
+     </div>
+    </div>
+   </div>
+  </section>
+  <footer class="footer">
+   <p>
+    © 2025 dosmth. All rights reserved.
+   </p>
+  </footer>
+  
+  <script>
+    let currentIndex = 0;
+
+    function changeSlide(direction) {
+      const slides = document.querySelector('.slides');
+      const totalSlides = slides.children.length;
+      currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+  </script>
+  
+ </body>
+</html>
