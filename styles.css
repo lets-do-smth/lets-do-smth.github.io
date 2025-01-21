@@ -7,6 +7,7 @@ body, html {
     scroll-behavior: smooth; /* Enables smooth scrolling */
     height: 100%; /* Sets height for body and html */
     overflow-x: hidden; /* Prevents horizontal scrolling */
+    background: black;
 }
 
 /* Common Section Styles */
@@ -52,9 +53,11 @@ body, html {
 .main-info {
     width: 100%; /* Full-width */
     text-align: center; /* Centers text */
-    background-color: black; /* Black background */
-    color: #D7D7D7; /* #D7D7D7 text */
+/*    background-color: black; /* Black background */
+    background: #000000 url('assets/back2.png') center / cover;
+    color: black; /* #D7D7D7 text */
     padding: 20px 0; /* Vertical padding */
+    border-radius: 105px; /* Rounded corners */
 }
 
 .profile-image {
@@ -75,7 +78,7 @@ h1 {
 .additional-info {
     margin-top: 40px; /* Space above additional info */
     font-size: 1rem; /* Standard font size */
-    color: #1356E3; /* Blue text color */
+    color: black; /* Blue text color */
     font-weight: 700; /* Bold text */
     text-transform: uppercase;
     line-height: 2;
