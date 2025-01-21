@@ -135,9 +135,9 @@ h1 {
     background: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
 }
 
-.work-content .empty-project {
-    background: rgba(0, 0, 0, 0);
-}
+/*.work-content .empty-project {*/
+/*    background: rgba(0, 0, 0, 0);*/
+/*}*/
 
 .work-title {
     margin: 0; /* Removes default margin */
@@ -208,7 +208,11 @@ h1 {
 .project-5 { background: #2B9B4A url('assets/stickers.png') center / cover; }
 .project-6 { background: #fff url('assets/logos.gif') center / cover; }
 .project-7 { background: #fff url('assets/cover.gif') center / cover; }
-.empty-project { background: #D7D7D7 }
+.empty-project { background: #FFCC00 url('assets/empty.png') center / cover; }
+.empty-project { border-radius: 105px; }
+.work-link { background: #D7D7D7}
+
+
 
 /* Contact Section */
 .contacts-section {
